@@ -117,5 +117,8 @@
 		</div>
 	</section>
 
-	<footer>Copyright 2026 eGGs.gd</footer>
+	<footer>
+		<span>Copyright 2026 eGGs.gd</span>
+		<a href="{base}/privacy">Privacy Policy</a>
+	</footer>
 </main>
