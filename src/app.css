@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+	--bg: #0e0d0b;
+	--bg-elevated: #161411;
+	--text: #e8e2d6;
+	--text-soft: #b9b1a3;
+	--text-muted: #8a8275;
+	--accent: #c4a574;
+	--accent-dim: #8b7355;
+	--border: color-mix(in srgb, var(--accent) 14%, transparent);
+	--fill-subtle: color-mix(in srgb, var(--accent) 8%, transparent);
+	--font-serif: 'Cormorant Garamond', Georgia, serif;
+	--font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-sans);
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: var(--bg);
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background:
+		radial-gradient(ellipse at 50% 0%, var(--fill-subtle) 0%, transparent 58%),
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+	pointer-events: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+button {
+	font: inherit;
+}
+
+.page {
+	position: relative;
+	width: min(100%, 96rem);
+	margin: 0 auto;
+	padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 3rem) 2rem;
+}
+
+.intro {
+	display: grid;
+	justify-items: start;
+	width: min(100%, 43rem);
+	margin: 0 auto;
+	padding-bottom: clamp(2rem, 5vw, 3.75rem);
+	text-align: left;
+}
+
+.title-row {
+	display: flex;
+	align-items: baseline;
+	gap: clamp(0.75rem, 2vw, 1.15rem);
+	max-width: 56rem;
+}
+
+.glyphs {
+	margin: 0;
+	color: var(--accent);
+	font-family: var(--font-serif);
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 0.95;
+	white-space: nowrap;
+}
+
+h1 {
+	margin: 0;
+	font-family: var(--font-serif);
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 0.95;
+}
+
+.promo {
+	max-width: 42rem;
+	margin: 1rem 0 0;
+	color: var(--text-soft);
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.55;
+}
+
+.screenshots {
+	display: flex;
+	gap: clamp(1rem, 2vw, 1.5rem);
+	margin-inline: calc(clamp(1rem, 4vw, 3rem) * -1);
+	padding: 0 clamp(1rem, 4vw, 3rem) clamp(3rem, 7vw, 5.5rem);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-color: var(--accent-dim) transparent;
+}
+
+.screenshots img {
+	width: min(72vw, 19rem);
+	height: auto;
+	min-width: min(72vw, 19rem);
+	aspect-ratio: 1242 / 2688;
+	border: 1px solid var(--border);
+	border-radius: 1.25rem;
+	box-shadow: 0 1.5rem 4rem color-mix(in srgb, #000 36%, transparent);
+	scroll-snap-align: center;
+}
+
+.description {
+	width: min(100%, 43rem);
+	margin: 0 auto;
+	padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 8vw, 5rem);
+	border-top: 1px solid var(--border);
+	color: var(--text-soft);
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1.72;
+}
+
+.description p {
+	margin: 0 0 1.1rem;
+}
+
+.description ul {
+	display: grid;
+	gap: 0.42rem;
+	margin: 0 0 1.35rem;
+	padding: 0;
+	list-style: none;
+}
+
+.description li::before {
+	content: '•';
+	margin-right: 0.65rem;
+	color: var(--accent);
+}
+
+.closing {
+	color: var(--text);
+	font-family: var(--font-serif);
+	font-size: 2.5rem;
+	line-height: 1.12;
+	text-align: center;
+}
+
+.store-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 1.75rem;
+}
+
+.store-buttons button {
+	display: grid;
+	min-width: 10.75rem;
+	min-height: 3.75rem;
+	padding: 0.62rem 1.1rem 0.7rem;
+	border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+	border-radius: 8px;
+	background: color-mix(in srgb, var(--bg-elevated) 86%, transparent);
+	color: var(--text);
+	font-size: 1.13rem;
+	font-weight: 500;
+	line-height: 1.05;
+	text-align: left;
+	opacity: 0.48;
+	cursor: not-allowed;
+}
+
+.store-buttons span {
+	color: var(--text-muted);
+	font-size: 0.72rem;
+	font-weight: 400;
+}
+
+footer {
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+	color: var(--text-muted);
+	font-size: 0.85rem;
+	text-align: center;
+}
+
+@media (max-width: 720px) {
+	.page {
+		padding-top: 2rem;
+	}
+
+	.title-row {
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.screenshots img {
+		scroll-snap-align: start;
+	}
+
+	.store-buttons,
+	.store-buttons button {
+		width: 100%;
+	}
+}
