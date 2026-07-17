@@ -49,10 +49,6 @@ img {
 	max-width: 100%;
 }
 
-button {
-	font: inherit;
-}
-
 .page {
 	position: relative;
 	width: min(100%, 96rem);
@@ -169,11 +165,13 @@ h1 {
 	margin-top: 1.75rem;
 }
 
-.store-buttons button {
-	display: grid;
+.store-buttons .badge {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
 	min-width: 10.75rem;
 	min-height: 3.75rem;
-	padding: 0.62rem 1.1rem 0.7rem;
+	padding: 0.62rem 1.15rem;
 	border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
 	border-radius: 8px;
 	background: color-mix(in srgb, var(--bg-elevated) 86%, transparent);
@@ -182,14 +180,42 @@ h1 {
 	font-weight: 500;
 	line-height: 1.05;
 	text-align: left;
-	opacity: 0.48;
-	cursor: not-allowed;
 }
 
-.store-buttons span {
+.store-buttons .badge-logo {
+	flex: none;
+	width: 1.65rem;
+	height: 1.65rem;
+}
+
+.store-buttons .badge-text {
+	display: grid;
+}
+
+.store-buttons .badge-text small {
 	color: var(--text-muted);
 	font-size: 0.72rem;
 	font-weight: 400;
+}
+
+.store-buttons .badge[aria-disabled='true'] {
+	opacity: 0.48;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.store-buttons .pwa {
+	text-decoration: none;
+	transition:
+		border-color 0.2s ease,
+		background 0.2s ease;
+}
+
+.store-buttons .pwa:hover,
+.store-buttons .pwa:focus-visible {
+	border-color: var(--accent);
+	background: color-mix(in srgb, var(--accent) 12%, var(--bg-elevated));
+	outline: none;
 }
 
 footer {
@@ -273,7 +299,7 @@ footer a:hover,
 	}
 
 	.store-buttons,
-	.store-buttons button {
+	.store-buttons .badge {
 		width: 100%;
 	}
 }
