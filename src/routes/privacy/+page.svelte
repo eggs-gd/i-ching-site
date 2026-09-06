@@ -6,7 +6,7 @@
 	<title>Privacy Policy · I Ching: Shape of Momentum</title>
 	<meta
 		name="description"
-		content="Privacy Policy for I Ching: Shape of Momentum. Last updated: May 2026."
+		content="Privacy Policy for I Ching: Shape of Momentum. Last updated: September 2026."
 	/>
 </svelte:head>
 
@@ -15,19 +15,30 @@
 
 	<article class="policy">
 		<h1>Privacy Policy</h1>
-		<p class="updated">Last updated: May 2026</p>
+		<p class="updated">Last updated: September 2026</p>
 
 		<p>Shape of Momentum respects your privacy.</p>
 
 		<p>
-			The app does not require registration and does not collect personal information such as your
-			name, email address, phone number, or account credentials.
+			The app works fully without an account. By default, your questions, readings, and archive
+			entries are stored only on your device and are not transmitted to our servers.
+		</p>
+
+		<h2>Optional sync</h2>
+
+		<p>
+			You may choose to sign in with Google to sync your archive across your devices. If you do,
+			your archive entries — together with your Google account identifier, name, and email address —
+			are stored in Google Firebase (Realtime Database) under your account, so that your signed-in
+			devices can share the same archive.
 		</p>
 
 		<p>
-			Questions, readings, and archive entries are stored locally on your device and are not
-			transmitted to our servers.
+			Signing out stops syncing on that device but does not delete the copy already stored in
+			Firebase. To have your synced data removed, contact us at the address below.
 		</p>
+
+		<h2>Analytics</h2>
 
 		<p>
 			The app uses Firebase Analytics to collect anonymous usage statistics. This information helps
@@ -35,13 +46,13 @@
 			No personally identifiable information is collected through analytics.
 		</p>
 
-		<p>The app does not sell personal data to third parties.</p>
-
-		<p>The app does not use advertising networks.</p>
+		<p>
+			The app does not sell personal data to third parties, and does not use advertising networks.
+		</p>
 
 		<p>
-			If future versions introduce online accounts, cloud synchronization, purchases, or additional
-			data collection, this Privacy Policy will be updated accordingly.
+			If future versions introduce purchases or additional data collection, this Privacy Policy will
+			be updated accordingly.
 		</p>
 
 		<h2>Contact</h2>
